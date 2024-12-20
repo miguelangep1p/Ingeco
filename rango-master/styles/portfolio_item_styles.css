@@ -909,3 +909,15 @@ section
 {
 	color: #28262d;
 }
+
+/* Clase personalizada para las tarjetas */
+.custom-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover: movimiento y sombra más intensa */
+.custom-card:hover {
+    transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
