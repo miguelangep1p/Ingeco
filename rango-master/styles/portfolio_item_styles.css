@@ -921,3 +921,87 @@ section
     transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
+
+
+/* Contenedor individual de cada slide */
+.slider_item_n {
+    flex: 1 0 auto; /* Cada slide toma espacio según su contenido */
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    background-color: #f4a261; /* Fondo anaranjado */
+    padding: 10px; /* Espaciado interno opcional */
+}
+
+/* Imágenes del slider */
+.slider_image_n {
+    max-width: 100%; /* Limita el ancho al tamaño del contenedor */
+    max-height: 80%; /* Limita la altura al 80% del contenedor */
+    object-fit: contain; /* Escala la imagen manteniendo su proporción */
+    display: block;
+}
+
+.custom-control_n {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    width: 50px; /* Ancho de los controles */
+    height: 50px; /* Alto de los controles */
+    border-radius: 50%; /* Forma circular */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover effect para controles */
+.custom-control_n:hover {
+    background-color: rgba(249, 144, 24, 0.778); /* Cambia el fondo al pasar el mouse (anaranjado) */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%; /* Posiciona los controles al 50% del contenedor */
+    transform: translateY(-50%); /* Centra los controles verticalmente */
+    width: 50px; /* Ancho opcional para los controles */
+    height: 50px; /* Alto opcional para los controles */
+    background-color: rgba(0, 0, 0, 0.162); /* Fondo semitransparente */
+    border-radius: 50%; /* Forma circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Personalizar iconos */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 60%; /* Ajustar tamaño del icono */
+    filter: invert(1); /* Cambiar color del icono a blanco */
+}
+
+.centered-image {
+	display: block;
+	margin: auto;
+}
+
+.flex-container {
+	display: flex;
+	align-items: flex-start; /* Alinea elementos en la parte superior */
+	gap: 20px; /* Espacio entre la imagen y la lista */
+}
+
+.flex-container img {
+	max-width: 40%; /* Ajusta el tamaño de la imagen según sea necesario */
+	height: auto;
+}
+
+.flex-container ul {
+	margin: 0;
+	padding-left: 20px; /* Ajusta el espacio a la izquierda para las viñetas */
+	list-style-type: disc; /* Usa viñetas por defecto */
+}
+
+.flex-container li {
+	margin-bottom: 10px; /* Espacio entre cada ítem de la lista */
+}
+
+.flex-container p {
+	margin: 0; /* Elimina márgenes adicionales en el párrafo */
+	flex: 1; /* Permite que el contenido del párrafo ocupe el espacio necesario */
+}
