@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Interactivos - IngeSolver</title>
+    <link rel="stylesheet" href="styles/bootstrap4/bootstrap.min.css">
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Pon a prueba lo aprendido</h1>
+        <p class="text-center">Resuelve los siguientes ejercicios basados en los temas anteriores.</p>
+        <hr>
+
+        <!-- Ejercicio 1 -->
+        <div class="mb-5">
+            <h3>Tasas de Interés Nominal y Efectiva</h3>
+            <p>Un banco ofrece una tasa nominal anual del 8% capitalizable trimestralmente. Calcula la tasa efectiva anual.</p>
+            <form id="exercise1">
+                <div class="form-group">
+                    <label for="efectiva">Tasa Efectiva Anual:</label>
+                    <input type="text" id="efectiva" class="form-control" placeholder="Escribe tu respuesta">
+                </div>
+                <button type="button" class="btn btn-success" onclick="validateExercise1()">Enviar</button>
+                <div id="feedback1" class="mt-3"></div>
+            </form>
+        </div>
+
+        <!-- Ejercicio 2 -->
+        <div class="mb-5">
+            <h3>Valor del Dinero en el Tiempo</h3>
+            <p>Inviertes $2,000 hoy con una tasa de interés anual del 6% durante 4 años. ¿Cuál será el valor futuro?</p>
+            <form id="exercise2">
+                <div class="form-group">
+                    <label for="futureValue">Valor Futuro:</label>
+                    <input type="text" id="futureValue" class="form-control" placeholder="Escribe tu respuesta">
+                </div>
+                <button type="button" class="btn btn-success" onclick="validateExercise2()">Enviar</button>
+                <div id="feedback2" class="mt-3"></div>
+            </form>
+        </div>
+        
+        <!-- Ejercicio 3 -->
+        <div class="mb-5">
+            <h3>Riesgo y Rendimiento</h3>
+            <p>Calcula el retorno esperado si \( R_f = 3\%, \beta = 1.5 \), y \( E(M) = 8\% \).</p>
+            <form id="exercise3">
+                <div class="form-group">
+                    <label for="expectedReturn">Retorno Esperado:</label>
+                    <input type="text" id="expectedReturn" class="form-control" placeholder="Escribe tu respuesta">
+                </div>
+                <button type="button" class="btn btn-success" onclick="validateExercise3()">Enviar</button>
+                <div id="feedback3" class="mt-3"></div>
+            </form>
+        </div>
+
+        <!-- Ejercicio 4 -->
+        <div class="mb-5">
+            <h3>Análisis de Sensibilidad</h3>
+            <p>Un proyecto tiene un costo inicial de $10,000. Si los costos aumentan un 5%, ¿cuál será el nuevo costo total?</p>
+            <form id="exercise4">
+                <div class="form-group">
+                    <label for="sensitivity">Nuevo Costo Total:</label>
+                    <input type="text" id="sensitivity" class="form-control" placeholder="Escribe tu respuesta">
+                </div>
+                <button type="button" class="btn btn-success" onclick="validateExercise4()">Enviar</button>
+                <div id="feedback4" class="mt-3"></div>
+            </form>
+        </div>
+
+        <!-- Ejercicio 5 -->
+        <div class="mb-5">
+            <h3>Valor Presente</h3>
+            <p>Calcula el valor presente de una inversión que genera $5,000 anualmente durante 3 años con una tasa de descuento del 10%.</p>
+            <form id="exercise5">
+                <div class="form-group">
+                    <label for="presentValue">Valor Presente:</label>
+                    <input type="text" id="presentValue" class="form-control" placeholder="Escribe tu respuesta">
+                </div>
+                <button type="button" class="btn btn-success" onclick="validateExercise5()">Enviar</button>
+                <div id="feedback5" class="mt-3"></div>
+            </form>
+        </div>
+
+        <!-- Ejercicio 6 -->
+        <div class="mb-5">
+            <h3>Análisis de TIR</h3>
+            <p>Si inviertes $10,000 en un proyecto que genera $3,000 anualmente durante 5 años, ¿cuál es la TIR aproximada?</p>
+            <form id="exercise6">
+                <div class="form-group">
+                    <label for="tir">TIR Aproximada (%):</label>
+                    <input type="text" id="tir" class="form-control" placeholder="Escribe tu respuesta">
+                </div>
+                <button type="button" class="btn btn-success" onclick="validateExercise6()">Enviar</button>
+                <div id="feedback6" class="mt-3"></div>
+            </form>
+        </div>
+
+        <!-- Botón para regresar -->
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-secondary btn-lg"><i class="fas fa-arrow-left"></i> Regresar</a>
+        </div>
+    </div>
+
+    <!-- JavaScript para validación -->
+    <script>
+        function validateExercise1() {
+            const efectiva = document.getElementById('efectiva').value;
+            const correctAnswer = 0.082432; // Tasa efectiva calculada
+            const feedback = document.getElementById('feedback1');
+            if (Math.abs(efectiva - correctAnswer) < 0.001) {
+                feedback.innerHTML = '<span class="text-success">¡Correcto!</span>';
+            } else {
+                feedback.innerHTML = '<span class="text-danger">Incorrecto. Intenta nuevamente.</span>';
+            }
+        }
+
+        function validateExercise2() {
+            const futureValue = document.getElementById('futureValue').value;
+            const correctAnswer = 2524.48; // Valor futuro calculado
+            const feedback = document.getElementById('feedback2');
+            if (Math.abs(futureValue - correctAnswer) < 0.01) {
+                feedback.innerHTML = '<span class="text-success">¡Correcto!</span>';
+            } else {
+                feedback.innerHTML = '<span class="text-danger">Incorrecto. Intenta nuevamente.</span>';
+            }
+        }
+
+        function validateExercise3() {
+            const expectedReturn = document.getElementById('expectedReturn').value;
+            const correctAnswer = 0.105; // Retorno esperado calculado
+            const feedback = document.getElementById('feedback3');
+            if (Math.abs(expectedReturn - correctAnswer) < 0.001) {
+                feedback.innerHTML = '<span class="text-success">¡Correcto!</span>';
+            } else {
+                feedback.innerHTML = '<span class="text-danger">Incorrecto. Intenta nuevamente.</span>';
+            }
+        }
+
+        function validateExercise4() {
+            const sensitivity = document.getElementById('sensitivity').value;
+            const correctAnswer = 10500; // 5% de incremento en el costo
+            const feedback = document.getElementById('feedback4');
+            if (Math.abs(sensitivity - correctAnswer) < 1) {
+                feedback.innerHTML = '<span class="text-success">¡Correcto!</span>';
+            } else {
+                feedback.innerHTML = '<span class="text-danger">Incorrecto. Intenta nuevamente.</span>';
+            }
+        }
+
+        function validateExercise5() {
+            const presentValue = document.getElementById('presentValue').value;
+            const correctAnswer = 12413.58; // Valor presente calculado
+            const feedback = document.getElementById('feedback5');
+            if (Math.abs(presentValue - correctAnswer) < 0.01) {
+                feedback.innerHTML = '<span class="text-success">¡Correcto!</span>';
+            } else {
+                feedback.innerHTML = '<span class="text-danger">Incorrecto. Intenta nuevamente.</span>';
+            }
+        }
+
+        function validateExercise6() {
+            const tir = document.getElementById('tir').value;
+            const correctAnswer = 14.87; // TIR aproximada
+            const feedback = document.getElementById('feedback6');
+            if (Math.abs(tir - correctAnswer) < 0.1) {
+                feedback.innerHTML = '<span class="text-success">¡Correcto!</span>';
+            } else {
+                feedback.innerHTML = '<span class="text-danger">Incorrecto. Intenta nuevamente.</span>';
+            }
+        }
+    </script>
+</body>
+</html>
